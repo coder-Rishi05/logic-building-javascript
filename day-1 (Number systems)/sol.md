@@ -51,4 +51,8 @@ for (let j = 1; j <= 100; j++) {
   console.log(a - j);
 }
 
+
 ```
+
+### q3
+
