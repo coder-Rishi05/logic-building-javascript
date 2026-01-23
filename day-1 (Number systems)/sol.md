@@ -113,3 +113,64 @@ for (let i = 1; i <= n; i++) {
 }
 
 ```
+
+### 🏠 **Homework / Practice Challenge**
+
+1. **Print all numbers divisible by 3 and 5 up to N**
+
+```js
+
+let n = 100
+
+for (let i = 0; i < n; i++) {
+
+    if(i%3===0 && i%5===0){
+        console.log(i)
+    }
+    
+}
+
+
+```
+
+2. **Find the sum of all odd numbers up to N**
+
+```js
+let n = 5;
+let sum = 0;
+for (let i = 1; i <= n; i++) {
+
+  if (i % 2 !== 0) {
+    console.log("odd : ", i);
+    sum = sum + i;
+    console.log("sum of odd : ",sum);
+  }
+}
+```
+
+
+---
+
+3. **Print the cubes of numbers from 1 to N**
+
+```js
+let n = 10;
+
+for (let i = 1; i <= n; i++) {
+  console.log(i * i * i);
+}
+```
+ 
+---
+
+4. **Print only the numbers that are both even and perfect squares**
+
+let n = 10;
+let sq = 1;
+for (let i = 1; i <= n; i++) {
+    sq = i * i;
+    // console.log(sq)
+  if (sq % 2 === 0) {
+    console.log(sq);
+  }
+}

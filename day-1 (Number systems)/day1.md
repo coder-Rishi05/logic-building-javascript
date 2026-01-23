@@ -59,7 +59,7 @@
 
 ### 🏠 **Homework / Practice Challenge**
 
-1. **Print all numbers divisible by 3 and 5 up to N**
+1. **Print all numbers divisible by 3 and 5 up to N** 
 
    * Input: `30`
    * Output: `15 30`
