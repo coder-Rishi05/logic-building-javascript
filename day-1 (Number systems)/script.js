@@ -1,11 +1,8 @@
-// for (let j = 1; j <= 100; j++) {
-//   let num = (j - 101).toFixed().split("-")[1];
-//   console.log(Number(num));
-// }
+// sum of n natural numbers
 
-let a = 101;
-for (let j = 1; j <= a; j++) {
-  if (j % 2 === 0) {
-    console.log(j);
-  }
+let n = 5;
+let sum = 1;
+for (let i = 1; i <= n; i++) {
+  sum = sum * i;
 }
+console.log(sum);

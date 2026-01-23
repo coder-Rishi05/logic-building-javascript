@@ -38,6 +38,7 @@ p.innerHTML += i + "<br>";
 ### q2
 
 - 1st type
+
 ```js
 for (let j = 1; j <= 100; j++) {
   let num = (j - 101).toFixed().split("-")[1];
@@ -56,3 +57,39 @@ for (let j = 1; j <= 100; j++) {
 
 ### q3
 
+```js
+let a = 101;
+for (let j = 1; j <= a; j++) {
+  if (j % 2 === 0) {
+    console.log(j);
+  }
+}
+```
+
+### q4
+
+```js
+let n = 5;
+let sum = 0;
+for (let i = 1; i <= n; i++) {
+  sum = sum + i;
+}
+console.log(sum);
+```
+
+### 5. **Product (Factorial) of N**
+
+```js
+let n = 5;
+let sum = 1;
+for (let i = 1; i <= n; i++) {
+  sum = sum * i;
+}
+console.log(sum);
+```
+
+### 6. **Sum of All Even Numbers up to N**
+
+```js
+
+```
