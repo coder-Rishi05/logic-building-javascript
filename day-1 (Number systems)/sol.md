@@ -91,5 +91,25 @@ console.log(sum);
 ### 6. **Sum of All Even Numbers up to N**
 
 ```js
+let n = 5;
+let sum = 0;
+for (let i = 1; i <= n; i++) {
+  if (i % 2 === 0) {
+    console.log(i)
+    sum = sum + i;
+  }
+}
+console.log(sum);
+
+
+```
+
+### 7 **Print Squares of Numbers from 1 to N**
+
+```js
+let n = 5;
+for (let i = 1; i <= n; i++) {
+  console.log(i * i);
+}
 
 ```
