@@ -164,7 +164,7 @@ for (let i = 1; i <= n; i++) {
 ---
 
 4. **Print only the numbers that are both even and perfect squares**
-
+```js
 let n = 10;
 let sq = 1;
 for (let i = 1; i <= n; i++) {
@@ -174,3 +174,4 @@ for (let i = 1; i <= n; i++) {
     console.log(sq);
   }
 }
+```
