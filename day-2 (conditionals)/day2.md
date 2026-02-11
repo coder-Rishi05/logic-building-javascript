@@ -54,6 +54,7 @@
 
 5. **Check if a Year is a Leap Year**
 
+
    * Input: `2024`
    * Output: `Leap Year`
    * ✨ *Builds compound condition logic using multiple `if` statements (`%4`, `%100`, `%400`).*
