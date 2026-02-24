@@ -1,11 +1,12 @@
-// 1. Print Right-Angled Star Triangle
+let row = 5;
 
-for (let i = 1; i <= 5; i++) {
-    console.log(i)
-    for (let k = 0; k < i; k++) {
-        process.std.write("*")
-        
-        
-    }
-       console.log()
-}   
+for (let i = 0; i <= row*3; i++) {
+  //   console.log(row);
+  let str = "";
+  for (let j = 0; j < i ; j++) {
+    str = str + "*";
+
+  }
+  console.log(str);
+  console.log(i)
+}
