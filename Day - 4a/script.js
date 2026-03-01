@@ -1,18 +1,29 @@
-// creating a function to generate a number using digit
+// function removeDecimal(number) {
+//   while (!Number.isInteger(number)) {
+//     number = number * 10;
+//   }
+//   return number;
+// }
 
-let digit = [2, 4, 6, 5];
-let mul = 0;
-let num = 1;
+// console.log(removeDecimal(12.34));
 
-let digitsToNumber = (digit) => {
-  for (let i = 0; i < digit.length; i++) {
-    num = digit[i] * Math.pow(10, i);
-    mul += num;
-  }
+// let whole = [1, 2];
 
-  return mul;
-};
+// let fraction = [3, 4];
 
-let a = digitsToNumber(digit);
+// let size = whole.length + fraction.length;
 
-console.log(a)
+// console.log(size);
+// let arr = [];
+// for (let i = 0; i < size; i++) {
+//   if (i < whole.length ) {
+//     arr.push(whole[i]);
+//   }
+//   // if (i > whole.length) {
+//     arr.push(fraction[i]);
+//   // }
+//   //  console.log(whole[i])
+//   //  console.log(fraction[i])
+// }
+
+// console.log(arr);
