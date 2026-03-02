@@ -1,29 +1,35 @@
-// function removeDecimal(number) {
-//   while (!Number.isInteger(number)) {
-//     number = number * 10;
-//   }
-//   return number;
-// }
+// 3. **Find the Largest and Smallest Digit in a Number**
 
-// console.log(removeDecimal(12.34));
+//    * Input: `N = 9483`
+//    * Output: `Largest = 9, Smallest = 3`
+//    * ✨ *Enhances comparison logic using loops.*
 
-// let whole = [1, 2];
+let n = 9483;
 
-// let fraction = [3, 4];
+function avg(n) {
+  let sum = 0,
+    count = 0,
+    arr = [];
 
-// let size = whole.length + fraction.length;
+  while (n > 0) {
+    rem = n % 10;
+    arr.push(rem);
+    count++;
+    n = Math.floor(n / 10);
+  }
 
-// console.log(size);
-// let arr = [];
-// for (let i = 0; i < size; i++) {
-//   if (i < whole.length ) {
-//     arr.push(whole[i]);
-//   }
-//   // if (i > whole.length) {
-//     arr.push(fraction[i]);
-//   // }
-//   //  console.log(whole[i])
-//   //  console.log(fraction[i])
-// }
+  let l = arr[1],
+    s = arr[0];
 
-// console.log(arr);
+  for (let i = 0; i < arr.length; i++) {
+    if (l < arr[i] && l > s) {
+      l = arr[i];
+    } else if (s < arr[i + 1] && s < l) {
+      s = arr[i];
+    }
+  }
+
+  return { l, s };
+}
+
+console.log(avg(n));

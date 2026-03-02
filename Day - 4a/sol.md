@@ -80,3 +80,95 @@ function seperateParts(num) {
 
 console.log(seperateParts(12.5));
 ```
+
+5. **Generate a Decimal Number from Whole and Fractional Digits**
+   - Input: `Whole = [1, 2], Fraction = [3, 4]`
+
+6. Palindrome number
+
+```js
+function checkPali(num) {
+  let prev = num;
+  let sum = 0;
+  let rem = 0;
+  while (num > 0) {
+    rem = num % 10;
+    sum = sum * 10 + rem;
+    num = Math.floor(num / 10);
+  }
+  if (sum === prev) return true;
+  else return false;
+}
+
+console.log(checkPali(121));
+```
+
+7. **Check if a Number is an Armstrong Number (also called a Narcissistic Number)**
+
+```js
+function isArmStrong(num) {
+  let org = num;
+  const digits = [];
+  while (num > 0) {
+    digits.unshift(num % 10);
+    num = Math.floor(num / 10);
+  }
+  let difitPowerSum = 0;
+
+  for (let i = 0; i < digits.length; i++) {
+    difitPowerSum += digits[i] ** digits.length;
+  }
+
+  return difitPowerSum === org;
+}
+
+console.log(isArmStrong(1531));
+```
+
+1. **Find the Sum of Digits**
+
+```js
+Input: `N = 987`;
+
+let n = 987;
+
+function sumDeigits(n) {
+  let sum = 0,
+    rem = 0;
+
+  while (n > 0) {
+    rem = n % 10;
+    sum = sum + rem;
+    n = Math.floor(n / 10);
+  }
+
+  return sum;
+}
+
+console.log(sumDeigits(n));
+```
+
+2. **Find the Average of Digits**
+
+    * Input: `N = 987`
+
+```js
+let n = 4567;
+
+function avg(n) {
+  let sum = 0,
+    count = 0,
+    avg = 0,
+    rem = 0;
+
+  while (n > 0) {
+    rem = n % 10;
+    sum = sum + rem;
+    count++;
+    n = Math.floor(n / 10);
+  }
+  return (avg = sum / count);
+}
+
+console.log(avg(n));
+```
