@@ -1,19 +1,9 @@
-// Check if Two Strings Are Anagrams (Without Sorting)
+//Remove All Duplicate Characters (Keep First Occurrence)
 
-let str1 = "listen";
+let str = "thiss"
 
-let str2 = "silentkkk";
-
-function ang(str1, str2) {
-  if (str1.length !== str2.length) return false;
-  for (let i = 0; i < str1.length; i++) {
-    for (let j = 0; j < str2.length; j++) {
-      if (str1[i] === str2[i]) {
-        return true;
-      }
-    }
-  }
-  return false;
+function remDup(str1, str2) {
+  
 }
 
-console.log(ang(str1, str2));
+console.log(ang(str));
