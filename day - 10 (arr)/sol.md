@@ -52,3 +52,44 @@ function isSorted(arr) {
 
 console.log(isSorted(arr));
 ```
+4. Find 3rd largest number in the array
+
+```js
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+let arr = [1,2,3,4,5,6];
+
+let a1= 0, a2 = 1, a3 = 2;
+
+for(let i = 0; i < arr.length ; i++){
+    if(arr[i] > arr[a1]){
+        a1 = arr[i]
+    }
+}
+for(let i = 0; i < arr.length ; i++){
+    if(arr[i] > arr[a2] && arr[i] < a1){
+        a2 = arr[i]
+    }
+}
+
+for(let i = 0; i < arr.length ; i++){
+    if(arr[i] > arr[a3] && arr[i] < arr[a2] && arr[i] < a1){
+        a3 = arr[i]
+    }
+}
+
+if(a1 < a2){
+    if(a1 < a3){
+        console.log(a1)
+    }else if(a2 < a3) {
+        console.log(a2)
+    }
+}else {
+        console.log(a3)
+    }
+```
+
+   
+
+
