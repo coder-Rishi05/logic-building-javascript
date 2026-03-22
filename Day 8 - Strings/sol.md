@@ -1,18 +1,27 @@
 1. reverse a string
 
 ```js
-let str = "javascript";
-
-function reverseStr(str) {
-  let revStr = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    revStr += str[i];
-  }
-  return revStr;
-}
-
-console.log(reverseStr(str));
+var reverseStr = function(s, k) {
+    // Convert string to array (strings are immutable in JS)
+    const arr = s.split('');
+    
+    // Process every 2k characters
+    for (let i = 0; i < arr.length; i += 2 * k) {
+        let left = i;
+        let right = Math.min(i + k - 1, arr.length - 1);
+        
+        // Reverse first k characters in this block
+        while (left < right) {
+            [arr[left], arr[right]] = [arr[right], arr[left]];
+            left++;
+            right--;
+        }
+    }
+    
+    return arr.join('');
+};   
 ```
+
 
 2. reverse a string
 
