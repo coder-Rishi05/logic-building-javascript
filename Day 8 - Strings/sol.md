@@ -17,6 +17,31 @@ console.log(reverseStr(str));
 2. check string palindrome
 
 ```js
+var reverseStr = function(s, k) {
+    // Convert string to array (strings are immutable in JS)
+    const arr = s.split('');
+    
+    // Process every 2k characters
+    for (let i = 0; i < arr.length; i += 2 * k) {
+        let left = i;
+        let right = Math.min(i + k - 1, arr.length - 1);
+        
+        // Reverse first k characters in this block
+        while (left < right) {
+            [arr[left], arr[right]] = [arr[right], arr[left]];
+            left++;
+            right--;
+        }
+    }
+    
+    return arr.join('');
+};   
+```
+
+
+2. reverse a string
+
+```js
 let str = "madam";
 
 function checkPalindrom(str) {
@@ -33,7 +58,7 @@ function check(str) {
   let right = str.length - 1;
 
   while (left < right) {
-    if (str[left] != str[right]) {
+    if (str[left] !== str[right]) {
       return false;
     }
     left++;
@@ -47,6 +72,7 @@ console.log(check(str));
 3. Count Frequency of Each Character
 
 ```js
+
 let item = "banana";
 
 function countfreq(str) {
@@ -106,6 +132,6 @@ function ang(str1, str2) {
   }
   return false;
 }
-
+  
 console.log(ang(str1, str2));
 ```
