@@ -8,13 +8,13 @@ function reverseStr(str) {
   for (let i = str.length - 1; i >= 0; i--) {
     revStr += str[i];
   }
-  return revStr;
+  return revStr;  
 }
 
 console.log(reverseStr(str));
 ```
 
-2. reverse a string
+2. check string palindrome
 
 ```js
 let str = "madam";
