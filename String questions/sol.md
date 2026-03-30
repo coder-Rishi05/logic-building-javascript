@@ -121,3 +121,117 @@ function charFrequency(str) {
   return freq;
 }
 ```
+
+```js
+function charFrequency(str) {
+  let freq = {};
+  for (let i = 0; i < str.length; i++) {
+    if (freq[str[i]]) {
+      freq[str[i]]++;
+    } else {
+      freq[str[i]] = 1;
+    }
+  }
+  for (let i = 0; i < str.length; i++) {
+    if (freq[str[i]] === 1) {
+      return str[i];
+    }
+  }
+}
+console.log(charFrequency("rishabh"));
+```
+
+```js
+// Q7. Reverse the words in a sentence (words ka order ulta, har word ka spelling same rahe).
+
+/*
+Input:  "hello world how are you"
+Output: "you are how world hello"
+*/
+
+let str = "hello world how are you";
+let rev = [];
+let word = "";
+
+for (let i = 0; i <= str.length; i++) {
+  if (str[i] === " " || i === str.length) {
+    console.log(word);
+    rev.push(word);
+    word = "";
+  } else {
+    word += str[i];
+  }
+}
+
+console.log(rev.reverse());
+
+let str = "rishi is brave";
+let word = "";
+let longest = "";
+
+function checkLongestString(str, longest, word) {
+  for (let i = 0; i <= str.length; i++) {
+    if (str[i] === " " || i === str.length) {
+      if (word.length > longest.length) longest = word;
+      word = "";
+    } else {
+      word += str[i];
+    }
+  }
+  return longest;
+}
+
+console.log(checkLongestString(str, longest, word));
+```
+
+```js
+let str = "hello world from javascript";
+let result = "";
+let word = "";
+
+for (let i = 0; i <= str.length; i++) {
+  if (str[i] === " " || i === str.length) {
+    result += word[0].toUpperCase() + word.slice(1);
+    word = "";
+  } else {
+    word += str[i];
+  }
+}
+
+console.log(result);
+```
+
+```js
+/*
+Input:  "programming"
+Output: "progamin"
+*/
+
+let str = "programming";
+let n = "";
+let set = new Set();
+for (let i = 0; i < str.length; i++) {
+  if (!set.has(str[i])) {
+    n += str[i];
+    set.add(str[i]);
+  }
+}
+
+console.log(n);
+```
+
+```js
+let str = "programming";
+let n = "";
+let seen = {};
+
+for (let i = 0; i < str.length; i++) {
+  if (!seen[str[i]]) {
+    // pehli baar mila?
+    n += str[i];
+    seen[str[i]] = true; // mark kar do
+  }
+}
+
+console.log(n); // "progamin" ✅
+```
