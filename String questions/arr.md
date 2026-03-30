@@ -190,3 +190,118 @@ for (let i = 0; i < arr.length; i++) {
 
 console.log(count);
 ```
+
+```js
+// shift by 1 element
+
+let arr = [1, 2, 4, 4, 5, 4, 7, 8, 9];
+
+function leftShiftByOne(arr) {
+  let first = arr[0]; // pehla element store karo
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    arr[i] = arr[i + 1]; // har element ek left khisak jao
+  }
+
+  arr[arr.length - 1] = first; // pehla element end mein daaldo
+
+  return arr;
+}
+
+console.log(leftShiftByOne(arr));
+```
+
+```js
+// missing element
+
+let arr = [1, 3, 4, 5];
+
+function isMiss(arr) {
+  let n = arr.length + 1; // total elements hone chahiye the
+  let expectedSum = (n * (n + 1)) / 2; // formula: 1 to n ka sum
+
+  let actualSum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    actualSum += arr[i];
+  }
+
+  return expectedSum - actualSum; // 3 ✅
+}
+
+console.log(isMiss(arr));
+```
+
+```js
+// move 0s element
+
+let arr = [1, 0, 0, 3, 0, 4, 5];
+
+function isMiss(arr) {
+  let c = 0,
+    ar = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0) {
+      c++;
+    } else {
+      ar.push(arr[i]);
+    }
+  }
+  for (let i = 0; i < c; i++) {
+    ar.push(0);
+  }
+
+  //   return expectedSum - actualSum; // 3 ✅
+  return ar;
+}
+
+console.log(isMiss(arr));
+```
+
+```js
+// move 0s element
+
+let arr = [1, 0, 0, 3, 0, 4, 5];
+
+function isMiss(arr) {
+  let pos = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== 0) {
+      arr[pos] = arr[i];
+      pos++;
+    }
+  }
+  while (pos < arr.length) {
+    arr[pos] = 0;
+    pos++;
+  }
+  return arr;
+}
+
+console.log(isMiss(arr));
+```
+
+```js
+// move 0s element
+
+let arr = [1, 0, 0, 3, 0, 4, 5];
+
+function isMiss(arr) {
+  let pos = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== 0) {
+      arr[pos] = arr[i];
+      pos++;
+    }
+  }
+  while (pos < arr.length) {
+    arr[pos] = 0;
+    pos++;
+  }
+  return arr;
+}
+
+console.log(isMiss(arr));
+```

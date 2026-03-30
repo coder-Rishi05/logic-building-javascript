@@ -1,19 +1,16 @@
-// shift by 1 element
+// move 0s element
 
-let k = 1;
+let arr = [1, ,3, 0,3, 3, 0, 4, 5];
 
-let arr = [1, 2, 4, 4, 5, 4, 7, 8, 9];
-
-function leftShiftByOne(arr) {
-  let first = arr[0]; // pehla element store karo
-  let sec = arr[1];
-  for (let i = 0; i < arr.length - 1; i++) {
-    arr[i] = arr[i + 1]; // har element ek left khisak jao
-  }
-
-  arr[arr.length - 1] = first; // pehla element end mein daaldo
-  arr[arr.length - 2] = sec; // pehla element end mein daaldo
-  return arr;
+function repeatingElem(arr) {
+  let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+    for (const element of arr) {
+      if (newArr.includes(element)) return element;
+      newArr.push(element);
+    }
+//   }
+  return newArr;
 }
 
-console.log(leftShiftByOne(arr));
+console.log(repeatingElem(arr));
