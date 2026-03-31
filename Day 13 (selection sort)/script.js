@@ -1,35 +1,25 @@
-// function swap(a, b) {
-//   let temp = a;
-//   a = b;
-//   b = temp;
-//   return [a, b];
-// }
+//Find the Kth Smallest Element Using Selection Logic
 
-// selection sort
+let arr = [9, 4, 7, 1, 3];
+let k = 3;
 
-let arr = [7, 2, 9, 4, 1];
+function selectionSort(arr, k) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    let minIndex = i;
 
-for (let i = 0; i < arr.length - 1; i++) {
-  let low = i;
-  for (let j = i + 1; j < arr.length; j++) {
-    if (arr[i] > arr[j]) {
-      let temp = arr[i];
-      arr[i] = arr[j];
-      arr[j] = temp;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] > arr[minIndex]) {
+        minIndex = j;
+      }
     }
-    console.log(arr[j]);
+    if (minIndex !== i) {
+      const temp = arr[i];
+      arr[i] = arr[minIndex];
+      arr[minIndex] = temp;
+    }
   }
-  console.log(arr[i]);
+
+  return arr;
 }
 
-console.log("sorted array : ", arr);
-
-// binary search
-
-let left = 0,
-  right = arr.length - 1;
-mid = Math.floor(left + right / 2);
-let tar = 7;
-
-
-
+console.log(selectionSort(arr, k));
